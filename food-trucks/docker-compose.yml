@@ -2,10 +2,18 @@ version: "2"
 services:
   es:
     image: elasticsearch:2.3
+    networks:
+      - foodtrucks
   web:
-    image: prakhar1989/foodtrucks-web
+    build: .
     command: python app.py
     ports:
       - "5000:5000"
     volumes:
       - .:/code
+    networks:
+      - foodtrucks
+    depends_on:
+      - es
+networks:
+  foodtrucks:

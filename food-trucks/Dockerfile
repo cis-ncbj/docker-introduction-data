@@ -8,7 +8,7 @@ RUN groupadd -r flask && useradd -r -g flask flask
 # install system-wide deps for python and node
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
-      python-pip python-dev \
+      python-pip python-dev dnsutils \
  && rm -rf /var/lib/apt/lists/*
 
 # Copy dependency lists
