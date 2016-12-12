@@ -4,6 +4,7 @@ MAINTAINER Konrad Klimaszewski <konrad.klimaszewski@ncbj.gov.pl>
 
 # Copy to the image pip requirements file
 COPY requirements.txt /usr/src/app/
+WORKDIR /usr/src/app
 
 # Install dependencies (notice --no-cache-dir)
 RUN pip install --no-cache-dir -r requirements.txt
