@@ -1,5 +1,5 @@
 # Base image
-FROM python:3
+FROM python:3.9
 MAINTAINER Konrad Klimaszewski <konrad.klimaszewski@ncbj.gov.pl>
 
 # Copy to the image pip requirements file
